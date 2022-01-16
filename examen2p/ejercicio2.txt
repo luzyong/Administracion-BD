@@ -1,0 +1,3 @@
+--Yong Rodríguez Luz María------
+--Respuesta a ejercicio 2 ---------------
+insert into Comprador (CPRCVE,CPRNOM,CPRDIR,CPRSTS) values(123456,'Luz Yong','Avenida Siempre Viva #1000',1);

@@ -1,0 +1,3 @@
+--Yong Rodríguez Luz María------
+--Respuesta a ejercicio 5 ---------------
+select  CPRFCH, count(CPRCVE) from  Comprador group by CPRFCH;

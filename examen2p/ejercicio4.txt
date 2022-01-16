@@ -1,0 +1,3 @@
+--Yong Rodríguez Luz María------
+--Respuesta a ejercicio 4 ---------------
+select * from Comprador order by CPRNOM,CPRFCH;

@@ -1,0 +1,3 @@
+--Yong Rodríguez Luz María------
+--Respuesta a ejercicio 6 ---------------
+alter table Departamentos alter column DPTDES char(120);

@@ -1,0 +1,3 @@
+--Yong Rodríguez Luz María------
+--Respuesta a ejercicio 3 ---------------
+update Vendedor set VENEDO = 'CMX' where VENEDO ='DF';

@@ -1,0 +1,49 @@
+--Yong Rodríguez Luz María------
+create table Vendedor
+(
+	VENCVE numeric(6) not null,
+	VENNOM char(50) not null,
+	VENDIR char(80) not null,
+	VENEDO char(3) not null,
+	VENCIU char(3),
+	VENPAI char(3),
+	VENTEL numeric(10),
+	VENCON char(40) not null,
+	VENRFC char(13) not null,
+	primary key(VENCVE)
+);
+create table Comprador
+(
+	CPRCVE numeric(6) not null,
+	CPRNOM char(50) not null,
+	CPRDIR char(80) not null,
+	CPRFCH numeric(8),
+	CPRTEL numeric(10),
+	CPRSTS char(1) not null,
+	primary key(CPRCVE)
+);
+create table Departamentos
+(
+	DPTCVE char(3) not null,
+	DPTSDP char(3) not null,
+	DPTDES char(80) not null,
+	DPTCMP numeric(6) not null,
+	DPTSTS numeric(1) not null,
+	primary key(DPTCVE,DPTSDP),
+	foreign key(DPTCMP) references Comprador(CPRCVE)
+);
+--Respuesta a ejercicio 1---------------------------
+create table Productos
+(
+	PRDSKU numeric(9) not null,
+	PRDDES char(40) not null,
+	PRDSTS char(1) not null,
+	PRDVDR numeric(6) not null,
+	PRDDEP char(3),
+	PRDSDP char(3),
+	PRDUDM char(3) not null,
+	PRDPRC numeric(3,2) not null,
+	primary key(PRDSKU),
+	foreign key(PRDVDR) references Vendedor(VENCVE),
+	foreign key(PRDDEP,PRDSDP) references Departamentos(DPTCVE,DPTSDP)
+);
